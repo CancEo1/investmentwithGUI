@@ -19,7 +19,8 @@ class FutureValueFrame(ttk.Frame):
         self.futureValue = tk.StringVar()
 
         self.initComponents()
-
+    
+    # components used within the program
     def initComponents(self):
         self.pack()
         ttk.Label(self, text="Monthly Investment:").grid(
@@ -52,7 +53,7 @@ class FutureValueFrame(ttk.Frame):
         # create a frame to store the two buttons
         buttonFrame = ttk.Frame(self)
         buttonFrame.grid(column=0, row=4, columnspan=2, sticky=tk.E)
-
+        # create buttons to execute the program within the GUI
         ttk.Button(buttonFrame, text="Calculate",
                    command=self.calculate).grid(column=0, row=0, padx=5)
         ttk.Button(buttonFrame, text="Exit",
